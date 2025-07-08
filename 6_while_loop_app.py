@@ -11,14 +11,8 @@ Enter 3 to end the program
     if 0 < choice < 4:
         if choice == 1:
             n = int(input('Enter a number: '))
-            temp = n
-            sum = 0
-
-            while n > 0:
-                sum += n
-                n -= 1
-            print(f'Sum from 1 to {temp} is {sum}')
-            
+            sum = (n * (n + 1)) // 2  # Using the formula for sum of first n natural numbers
+            print(f'Sum from 1 to {n} is {sum}')
 
         elif choice == 2:
             num1, op, num2 = input('Enter a simple expression: ').split()
@@ -31,9 +25,15 @@ Enter 3 to end the program
             elif op == '*':
                 print('Expression value is', num1 * num2)
             elif op == '/':
-                print('Expression value is', num1 / num2)
+                if num2 == 0:
+                    print('Error: Division by zero is not allowed.')
+                else:
+                    print('Expression value is', num1 / num2)
             elif op == '//':
-                print('Expression value is', num1 // num2)
+                if num2 == 0:
+                    print('Error: Division by zero is not allowed.')
+                else:
+                    print('Expression value is', num1 // num2)
             else:
                 print('Expression value is', num1 ** num2)
 
