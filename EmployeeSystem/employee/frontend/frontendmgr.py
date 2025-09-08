@@ -1,5 +1,5 @@
-from employeesmgr import EmployeesManager
-from utilites import input_valid_int
+from ..backend.employeesmgr import EmployeesManager
+from ..common.utilites import input_valid_int
 
 class FrontendManager:
     def __init__(self):

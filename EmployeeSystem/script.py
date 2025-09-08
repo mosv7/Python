@@ -1,4 +1,4 @@
-from frontendmgr import FrontendManager
+from employee.frontend.frontendmgr import FrontendManager
 
 
 

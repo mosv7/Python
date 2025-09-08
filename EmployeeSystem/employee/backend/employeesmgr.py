@@ -1,5 +1,5 @@
-from employee import Employee
-from utilites import input_valid_int
+from .employee import Employee
+from ..common.utilites import input_valid_int
 
 class EmployeesManager:
     def __init__(self):
