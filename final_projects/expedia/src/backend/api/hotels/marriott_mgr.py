@@ -40,3 +40,6 @@ class MarriottHotelManager(IReservationManager):
             result.append(MarriottCustomerInfo(customer.name, customer.passport, customer.birthdate))
         
         return result
+    
+    def cancel(self, reservation):
+        return MarriottHotelAPI.cancel_room(reservation.confirmation_id)

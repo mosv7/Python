@@ -33,6 +33,9 @@ class AirCanadaFlightManager(IReservationManager):
         customers_info = self._to_aircanada_customer_info_external(reservation.customers_info)
         return AirCandaOnlineAPI.reserve_flight(flight, customers_info)
     
+    def cancel(self, reservation):
+        return AirCandaOnlineAPI.cancel_flight(reservation.confirmation_id)
+    
     @staticmethod
     def _to_aircanada_flight_external(flight: Flight):
         return AirCanadaFlight(

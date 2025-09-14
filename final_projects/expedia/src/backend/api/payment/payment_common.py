@@ -28,7 +28,7 @@ class PaymentCard:
     def __repr__(self):
         return f'PaymentCard({self.owner_name}, {self.card_number}, {self.expir_date}, {self.security_code}, {self.address})'
 
-class DepitCard(PaymentCard):
+class DebitCard(PaymentCard):
     def __init__(self, owner_name, card_number, expir_date, security_code, address):
         super().__init__(owner_name, card_number, expir_date, security_code, address)
 
